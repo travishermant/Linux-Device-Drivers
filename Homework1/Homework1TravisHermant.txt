@@ -1,0 +1,111 @@
+2)	v4.16.1
+struct usb_device {
+	int		devnum;
+	char		devpath[16];
+	u32		route;
+	enum usb_device_state	state;
+	enum usb_device_speed	speed;
+
+	struct usb_tt	*tt;
+	int		ttport;
+
+	unsigned int toggle[2];
+
+	struct usb_device *parent;
+	struct usb_bus *bus;
+	struct usb_host_endpoint ep0;
+
+	struct device dev;
+
+	struct usb_device_descriptor descriptor;
+	struct usb_host_bos *bos;
+	struct usb_host_config *config;
+
+	struct usb_host_config *actconfig;
+	struct usb_host_endpoint *ep_in[16];
+	struct usb_host_endpoint *ep_out[16];
+
+	char **rawdescriptors;
+
+	unsigned short bus_mA;
+	u8 portnum;
+	u8 level;
+
+	unsigned can_submit:1;
+	unsigned persist_enabled:1;
+	unsigned have_langid:1;
+	unsigned authorized:1;
+	unsigned authenticated:1;
+	unsigned wusb:1;
+	unsigned lpm_capable:1;
+	unsigned usb2_hw_lpm_capable:1;
+	unsigned usb2_hw_lpm_besl_capable:1;
+	unsigned usb2_hw_lpm_enabled:1;
+	unsigned usb2_hw_lpm_allowed:1;
+	unsigned usb3_lpm_u1_enabled:1;
+	unsigned usb3_lpm_u2_enabled:1;
+	int string_langid;
+
+	/* static strings from the device */
+	char *product;
+	char *manufacturer;
+	char *serial;
+
+	struct list_head filelist;
+
+	int maxchild;
+
+	u32 quirks;
+	atomic_t urbnum;
+
+	unsigned long active_duration;
+
+
+3) Sample C code
+	// Travis Hermant Sample C code
+
+	#include <stdio.h>
+
+	int main()
+	{
+		int value;
+		printf("Enter a number: ");
+		scanf("%d", &value);
+		printf("Your number is %d\n", value);
+		return 0;
+	}
+
+4) section c typescript
+	Script started on Tue 10 Apr 2018 05:23:42 PM PDT
+	To run a command as administrator (user "root"), use "sudo <command>".
+	See "man sudo_root" for details.
+
+	]0;thermant@ubuntu: ~/Documents[01;32mthermant@ubuntu[00m:[01;34m~/Documents[00m$ gcc -g -o SampleC SampleC.c
+	]0;thermant@ubuntu: ~/Documents[01;32mthermant@ubuntu[00m:[01;34m~/Documents[00m$ ./SampleC
+	Enter a number: 100
+	Your number is 100
+	]0;thermant@ubuntu: ~/Documents[01;32mthermant@ubuntu[00m:[01;34m~/Documents[00m$ exit
+
+	Script done on Tue 10 Apr 2018 05:24:12 PM PDT
+	
+5) hello.c mode code from section D
+	//Travis Hermant
+	#include <linux/init.h>
+	#include <linux/module.h>
+	MODULE_LICENSE("Dual BSD/GPL");
+	static int __init hello_init(void)
+	{
+	printk(KERN_INFO "Hello, Kernel\n");
+	return 0;
+	}
+	static void __exit hello_exit(void)
+	{
+	printk(KERN_INFO "Goodbye, Kernel\n");
+	return;
+	}
+	module_init(hello_init);
+	module_exit(hello_exit);
+
+6) hello and goodbye kernel from syslog
+	Apr 10 18:40:27 ubuntu kernel: [ 7188.699524] Hello, Kernel
+	Apr 10 18:43:55 ubuntu kernel: [ 7396.904351] Goodbye, Kernel

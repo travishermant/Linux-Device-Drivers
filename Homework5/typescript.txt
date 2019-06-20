@@ -1,0 +1,113 @@
+Script started on Mon 21 May 2018 01:41:32 PM PDT
+root@ubuntu:~/homework5# make
+gcc -Wall -g -o homework5 homework5.c -lpci -lz
+homework5.c: In function ‘grab_address’:
+homework5.c:95:11: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 2 has type ‘off_t {aka long int}’ [-Wformat=]
+    printf("The base address is: 0x%2x \n", *base_address);
+           ^
+homework5.c:80:23: warning: variable ‘name’ set but not used [-Wunused-but-set-variable]
+  char namebuf[1024], *name;
+                       ^
+root@ubuntu:~/homework5# ./homework5
+The base address is: 0xfd5c0000 
+Current LEDCTL value of E1000: 0x07068302
+Turned all LED's off
+LED3[ ] LED2[X] LED1 [ ] LED0[X]
+LED3[ ] LED2[ ] LED1 [ ] LED0[ ]
+Loop number 1
+LED3[ ] LED2[ ] LED1 [ ] LED0[X]
+LED3[ ] LED2[ ] LED1 [X] LED0[ ]
+LED3[ ] LED2[X] LED1 [ ] LED0[ ]
+LED3[X] LED2[ ] LED1 [ ] LED0[ ]
+Loop number 2
+LED3[ ] LED2[ ] LED1 [ ] LED0[X]
+LED3[ ] LED2[ ] LED1 [X] LED0[ ]
+LED3[ ] LED2[X] LED1 [ ] LED0[ ]
+LED3[X] LED2[ ] LED1 [ ] LED0[ ]
+Loop number 3
+LED3[ ] LED2[ ] LED1 [ ] LED0[X]
+LED3[ ] LED2[ ] LED1 [X] LED0[ ]
+LED3[ ] LED2[X] LED1 [ ] LED0[ ]
+LED3[X] LED2[ ] LED1 [ ] LED0[ ]
+Loop number 4
+LED3[ ] LED2[ ] LED1 [ ] LED0[X]
+LED3[ ] LED2[ ] LED1 [X] LED0[ ]
+LED3[ ] LED2[X] LED1 [ ] LED0[ ]
+LED3[X] LED2[ ] LED1 [ ] LED0[ ]
+Loop number 5
+LED3[ ] LED2[ ] LED1 [ ] LED0[X]
+LED3[ ] LED2[ ] LED1 [X] LED0[ ]
+LED3[ ] LED2[X] LED1 [ ] LED0[ ]
+LED3[X] LED2[ ] LED1 [ ] LED0[ ]
+Restored LEDCTL value: 0x07068302
+Good Packets Received register value: 0x00000000
+root@ubuntu:~/homework5# ./homework5
+The base address is: 0xfd5c0000 
+Current LEDCTL value of E1000: 0x07068302
+Turned all LED's off
+LED3[ ] LED2[X] LED1 [ ] LED0[X]
+LED3[ ] LED2[ ] LED1 [ ] LED0[ ]
+Loop number 1
+LED3[ ] LED2[ ] LED1 [ ] LED0[X]
+LED3[ ] LED2[ ] LED1 [X] LED0[ ]
+LED3[ ] LED2[X] LED1 [ ] LED0[ ]
+LED3[X] LED2[ ] LED1 [ ] LED0[ ]
+Loop number 2
+LED3[ ] LED2[ ] LED1 [ ] LED0[X]
+LED3[ ] LED2[ ] LED1 [X] LED0[ ]
+LED3[ ] LED2[X] LED1 [ ] LED0[ ]
+LED3[X] LED2[ ] LED1 [ ] LED0[ ]
+Loop number 3
+LED3[ ] LED2[ ] LED1 [ ] LED0[X]
+LED3[ ] LED2[ ] LED1 [X] LED0[ ]
+LED3[ ] LED2[X] LED1 [ ] LED0[ ]
+LED3[X] LED2[ ] LED1 [ ] LED0[ ]
+Loop number 4
+LED3[ ] LED2[ ] LED1 [ ] LED0[X]
+LED3[ ] LED2[ ] LED1 [X] LED0[ ]
+LED3[ ] LED2[X] LED1 [ ] LED0[ ]
+LED3[X] LED2[ ] LED1 [ ] LED0[ ]
+Loop number 5
+LED3[ ] LED2[ ] LED1 [ ] LED0[X]
+LED3[ ] LED2[ ] LED1 [X] LED0[ ]
+LED3[ ] LED2[X] LED1 [ ] LED0[ ]
+LED3[X] LED2[ ] LED1 [ ] LED0[ ]
+Restored LEDCTL value: 0x07068302
+Good Packets Received register value: 0x000000a2
+root@ubuntu:~/homework5# ./homework5
+The base address is: 0xfd5c0000 
+Current LEDCTL value of E1000: 0x07068302
+Turned all LED's off
+LED3[ ] LED2[X] LED1 [ ] LED0[X]
+LED3[ ] LED2[ ] LED1 [ ] LED0[ ]
+Loop number 1
+LED3[ ] LED2[ ] LED1 [ ] LED0[X]
+LED3[ ] LED2[ ] LED1 [X] LED0[ ]
+LED3[ ] LED2[X] LED1 [ ] LED0[ ]
+LED3[X] LED2[ ] LED1 [ ] LED0[ ]
+Loop number 2
+LED3[ ] LED2[ ] LED1 [ ] LED0[X]
+LED3[ ] LED2[ ] LED1 [X] LED0[ ]
+LED3[ ] LED2[X] LED1 [ ] LED0[ ]
+LED3[X] LED2[ ] LED1 [ ] LED0[ ]
+Loop number 3
+LED3[ ] LED2[ ] LED1 [ ] LED0[X]
+LED3[ ] LED2[ ] LED1 [X] LED0[ ]
+LED3[ ] LED2[X] LED1 [ ] LED0[ ]
+LED3[X] LED2[ ] LED1 [ ] LED0[ ]
+Loop number 4
+LED3[ ] LED2[ ] LED1 [ ] LED0[X]
+LED3[ ] LED2[ ] LED1 [X] LED0[ ]
+LED3[ ] LED2[X] LED1 [ ] LED0[ ]
+LED3[X] LED2[ ] LED1 [ ] LED0[ ]
+Loop number 5
+LED3[ ] LED2[ ] LED1 [ ] LED0[X]
+LED3[ ] LED2[ ] LED1 [X] LED0[ ]
+LED3[ ] LED2[X] LED1 [ ] LED0[ ]
+LED3[X] LED2[ ] LED1 [ ] LED0[ ]
+Restored LEDCTL value: 0x07068302
+Good Packets Received register value: 0x00000003
+root@ubuntu:~/homework5# exit
+exit
+
+Script done on Mon 21 May 2018 01:43:51 PM PDT

@@ -1,0 +1,16 @@
+Travis Hermant
+ECE 373
+Homework7
+6/11/2018
+
+
+
+thermant@ubuntu:~$ uname -r
+4.9.107thermant
+
+thermant@ubuntu:/lib/modules/4.9.107thermant/kernel/drivers/misc/ece$ ls
+homework5.ko
+
+thermant@ubuntu:~$ lsmod
+Module                  Size  Used by
+homework5                4490  0

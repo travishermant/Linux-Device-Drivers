@@ -1,0 +1,12 @@
+[ 7188.699524] Hello, Kernel
+thermant@ubuntu:~/Documents/ECE373/HW1PartD$ tail /var/log/syslog
+Apr 10 18:37:24 ubuntu avahi-daemon[805]: New relevant interface ens33.IPv6 for mDNS.
+Apr 10 18:37:24 ubuntu avahi-daemon[805]: Registering new address record for fe80::d1dd:3c8f:3fc7:1311 on ens33.*.
+Apr 10 18:37:26 ubuntu whoopsie[1187]: [18:37:26] Could not get the list of active connections: Timeout was reached
+Apr 10 18:37:30 ubuntu NetworkManager[865]: <info>  [1523410650.7609] device (ens33): Activation: successful, device activated.
+Apr 10 18:37:30 ubuntu nm-dispatcher: req:2 'up' [ens33]: new request (1 scripts)
+Apr 10 18:37:30 ubuntu nm-dispatcher: req:2 'up' [ens33]: start running ordered scripts...
+Apr 10 18:37:30 ubuntu gnome-session[1644]: (deja-dup-monitor:2132): GLib-CRITICAL **: Source ID 89 was not found when attempting to remove it
+Apr 10 18:40:27 ubuntu kernel: [ 7188.690303] hello: loading out-of-tree module taints kernel.
+Apr 10 18:40:27 ubuntu kernel: [ 7188.692004] hello: module verification failed: signature and/or required key missing - tainting kernel
+Apr 10 18:40:27 ubuntu kernel: [ 7188.699524] Hello, Kernel

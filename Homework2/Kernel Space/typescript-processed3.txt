@@ -1,0 +1,26 @@
+Script started on Mon 23 Apr 2018 02:07:53 PM PDT
+travis@travis-VirtualBox: travis@travis-VirtualBox00:01;34~/Documents/homework2 sudo rmmod homework2
+[sudo] password for travis:
+travis@travis-VirtualBox: travis@travis-VirtualBox00m:01;34m~/Documents/homework2 make
+make -C /lib/modules/4.13.0-38-generic/build SUBDIRS=/home/travis/Documents/homework2 modules
+make[1]: Entering directory '/usr/src/linux-headers-4.13.0-38-generic'
+  Building modules, stage 2.
+  MODPOST 1 modules
+make[1]: Leaving directory '/usr/src/linux-headers-4.13.0-38-generic'
+travis@travis-VirtualBox: travis@travis-VirtualBox00m:01;34m~/Documents/homework2 sudo insmod homework2.ko
+travis@travis-VirtualBox: travis@travis-VirtualBox00m:01;34m~/Documents/homework2 ./a.out
+Char device is sending 25
+Enter a new value for the driver
+69
+New number from device is 69
+travis@travis-VirtualBox: travis@travis-VirtualBox00m:01;34m~/Documents/homework2 sudo rmmod homework2
+travis@travis-VirtualBox: travis@travis-VirtualBox00m:01;34m~/Documents/homework2 sudo insmod homework2.ko homework_param=70
+travis@travis-VirtualBox: travis@travis-VirtualBox00m:01;34m~/Documents/homework2 ./a.out
+Char device is sending 70
+Enter a new value for the driver
+105
+New number from device is 105
+travis@travis-VirtualBox: travis@travis-VirtualBox00:01;34~/Documents/homework2 sudo cat /sys/module/homework2/parameters/homework2_param
+70
+travis@travis-VirtualBox: travis@travis-VirtualBox00:01;34~/Documents/homework2 exit
+exit

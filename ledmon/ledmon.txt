@@ -1,0 +1,45 @@
+ledmon
+Shannon Nelson
+Mon Apr 23 13:45:59 PDT 2018
+
+This is a simple user-land tool for watching the LEDs on an Intel
+e1000/e1000e based NIC.  Simply compile with "make" and run as root.
+(As always, when someone says to run as root, please be sure to inspect
+the code so you are sure that there are no security issues lurking)
+
+sln
+
+---------------------------------------
+
+NAME
+	ledmon - watch LEDs on an Intel e1000/e1000e NIC
+
+SYNOPSIS
+	ledmon <bus:slot> [ethX] [-L]
+
+DESCRIPTION
+	Print the current state of the four LEDs on an Intel e1000/e1000e
+	based NIC, as specified by <bus:slot> on the command line.
+
+	-L	run in a continuous loop
+
+EXAMPLE
+	ledmon 00:08
+		Show the current state of the ens3 LEDs
+
+	ledmon 00:08 -L
+		Show the LED states over and over, looping several times
+		per second, so the changes can be seen.
+
+	ledmon 00:08 eth0 -L
+		Show the LED states over and over, looping several times
+		per second, so the changes can be seen.  Also use the
+		network interface (eth0) to determine link speed.  This
+		option is only valid when the e1000/e1000e driver is still
+		loaded. However, ledmon will still monitor leds if an invalid
+		network interface is specified.
+
+NOTES
+	This is not useful for any other NIC.
+
+	This must be run as root.

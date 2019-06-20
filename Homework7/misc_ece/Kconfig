@@ -1,0 +1,11 @@
+#
+# Homework 5
+#
+
+menu "Travis Hermant Homework5 INSERT"
+config HOMEWORK5
+	tristate "Homework 5 LED Blinker"
+	depends on PCI
+	help
+	  blink some LED's and some other stuff
+endmenu

@@ -1,0 +1,2 @@
+Apr 10 18:40:27 ubuntu kernel: [ 7188.699524] Hello, Kernel
+Apr 10 18:43:55 ubuntu kernel: [ 7396.904351] Goodbye, Kernel

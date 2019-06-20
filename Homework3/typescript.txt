@@ -1,0 +1,28 @@
+Script started on Thu 03 May 2018 05:29:57 PM PDT
+root@ubuntu:~/homework3# echo 0000:02:01.0 > /sys/module/e1000/drivers/pci\:e1000/unbind
+root@ubuntu:~/homework3# echo 0000:02:01.0 > /sys/module/homework3/drivers/pci\:pci_travis/bind
+root@ubuntu:~/homework3# ./a.out
+Received 07068302 from driver
+Wrote 0000000e to driver
+Wrote 0000000f to driver
+root@ubuntu:~/homework3# exit
+exit
+
+Script done on Thu 03 May 2018 05:30:53 PM PDT
+
+~~~~~~~~~~~~~~~~~~
+DMESG
+~~~~~~~~~~~~~~~~~~
+
+[ 9056.225786] pci_travis 0000:02:01.0: led_conf = 0x00c00249
+[ 9056.225833] pci_travis 0000:02:01.0: led_conf = 0x07068302
+[ 9056.225839] pci_travis 0000:02:01.0: led_value = 0x07068302
+[ 9067.852916] Opened succesfully 
+[ 9067.852941] ayyy i'm readin' here 
+[ 9067.852946] User received 07068302
+[ 9067.853197] ayyy i'm writin' here 
+[ 9067.853207] User sent 07068302 
+[ 9067.853369] New value 0000000e 
+[ 9069.853403] ayyy i'm writin' here 
+[ 9069.853415] User sent 0000000e 
+[ 9069.853454] New value 0000000f 
